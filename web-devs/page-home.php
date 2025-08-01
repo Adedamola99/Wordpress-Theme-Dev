@@ -37,32 +37,33 @@
                             <?php 
                                 $args = array (
                                     'post_type' => 'post',
-                                    'post_per_page' => 3,
+                                    'posts_per_page' => 3,
                                     'category_in' => array ( 5,4 ),
                                     'category_not_in' => array ( 1 ),
                                 );
 
-                                $postlist = new WP_Query( $args);
+                                $postlist = new WP_Query( $args );
                                                            
-                                    if( postlist->have_posts() ):
-                                        while( postlist->have_posts() ) : postlist->the_post();
+                                    if( $postlist->have_posts() ):
+                                        while( $postlist->have_posts() ) : $postlist->the_post();
                                         ?>
                                             <article>
-                                                <h2><?php the_title(); ?></h2>
+                                                <?php the_post_thumbnail( 'large' ); ?>
+                                                <h3><?php the_title() ?></h3>
                                                 <div class="meta-info">
-                                                    <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
-                                                    <p>Categories: <?php the_category( ' ' ); ?></p>
+                                                    <p>Posted in <?php echo get_the_date(); ?> <span> <?php the_author_posts_link();  ?></span></p>
+                                                    <p>Category: <?php the_category( ' ' ); ?></p>
                                                     <p>Tags: <?php the_tags( '', ', '); ?></p>
+                                                    <?php the_content() ?>
                                                 </div>
-                                                <?php the_content(); ?>
                                             </article>
                                         <?php
                                         endwhile;
                                         wp_reset_postdata();
                                     else: ?>
                                         <p>Nothing yet to be displayed!</p>
-                                <?php endif; ?>                                
-
+                                <?php endif; 
+                            ?>                                
                         </div>
                     </section>
                 </main>
