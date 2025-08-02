@@ -47,15 +47,18 @@
                                     if( $postlist->have_posts() ):
                                         while( $postlist->have_posts() ) : $postlist->the_post();
                                         ?>
-                                            <article>
-                                                <?php the_post_thumbnail( 'large' ); ?>
-                                                <h3><?php the_title() ?></h3>
+                                            <article class="latest-news">
+                                                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+                                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                                 <div class="meta-info">
-                                                    <p>Posted in <?php echo get_the_date(); ?> <span> <?php the_author_posts_link();  ?></span></p>
-                                                    <p>Category: <?php the_category( ' ' ); ?></p>
-                                                    <p>Tags: <?php the_tags( '', ', '); ?></p>
-                                                    <?php the_content() ?>
+                                                <p>
+                                                    by <span><?php the_author_posts_link(); ?></span> 
+                                                    Categories: <span><?php the_category( ' ' ); ?></span>
+                                                    Tags: <?php the_tags( '', ', ' ); ?>
+                                                </p>
+                                                <p><span><?php echo get_the_date(); ?></p>
                                                 </div>
+                                                <?php the_excerpt(); ?>
                                             </article>
                                         <?php
                                         endwhile;
