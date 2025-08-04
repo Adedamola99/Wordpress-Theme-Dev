@@ -17,9 +17,13 @@
                                         <p>Category: <?php the_category( ' ' ); ?></p>
                                         <p>Tags: <?php the_tags( '', ', '); ?></p>
                                         <?php the_content() ?>
+                                        <?php wp_link_pages(); ?>
                                     </div>
                                 </article>
                                 <?php
+                                if ( comments_open() || get_comments_number()) {
+                                    comments_template();
+                                }
                                 endwhile;
                             ?>
 
