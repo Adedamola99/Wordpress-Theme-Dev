@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <div id="content" class="site-content">
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
@@ -6,7 +7,7 @@
                 <div class="error-404">
                     <header>
                         <h1>Page not found</h1>
-                        <p>Unfortunately, the page you tried to reach does not exist on this site.</p>
+                        <p>Unfortunately, the page you are trying to reach does not exist on this site.</p>
                     </header>
 
                     <div class="error">
@@ -27,4 +28,5 @@
         </main>
     </div>
 </div>
+
 <?php get_footer(); ?>
