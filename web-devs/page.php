@@ -9,17 +9,8 @@
                         <div class="page-item">
                             <?php
                                 while( have_posts() ) : the_post();
+                                get_template_part('parts/content', 'page')
                                 ?>
-                                <article>
-                                    <h2><?php the_title() ?></h2>
-                                    <div class="meta-info">
-                                        <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
-                                        <p>Category: <?php the_category( ' ' ); ?></p>
-                                        <p>Tags: <?php the_tags( '', ', '); ?></p>
-                                        <?php the_content() ?>
-                                        <?php wp_link_pages(); ?>
-                                    </div>
-                                </article>
                                 <?php
                                 if ( comments_open() || get_comments_number()) {
                                     comments_template();
