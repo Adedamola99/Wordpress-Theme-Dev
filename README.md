@@ -1,1 +1,1 @@
-under construction.. theme development ReadMe doc
+under construction.. theme development
