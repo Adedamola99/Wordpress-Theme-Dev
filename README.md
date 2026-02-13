@@ -1,7 +1,3 @@
-Here’s a professional and clear README you can use for your React‑WordPress Theme Development» repository — structured to explain what the project is, how to use it, and how others can contribute.
-
-⸻
-
 🎨 WordPress Theme Development
 
 A starter WordPress theme development project built with PHP, HTML, CSS, and WordPress template files. This repository is designed to help you learn how to build and customize WordPress themes, with example template files and structure typically used in WP theme development.  ￼
