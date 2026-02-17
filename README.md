@@ -4,13 +4,10 @@ A starter WordPress theme development project built with PHP, HTML, CSS, and Wor
 
 (Note: This README assumes a classic theme — adjust details if your project is specifically block-based.)
 
-⸻
 
 🧠 What This Is
 
 This repo contains the beginnings of a WordPress theme — with core theme files such as index.php, template styles, and assets. WordPress themes control how a WordPress website looks and feels, generating page layouts dynamically based on content stored in the database.  ￼
-
-⸻
 
 📦 Features
 
